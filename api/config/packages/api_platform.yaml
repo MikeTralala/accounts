@@ -6,9 +6,14 @@ parameters:
     env(VARNISH_URL): ''
 
 api_platform:
+    swagger:
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
-    title: Hello API Platform
+    title: 'Accounts'
     version: 1.0.0
     # Varnish integration, remove if unwanted
     http_cache:
